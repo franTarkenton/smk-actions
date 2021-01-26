@@ -6,9 +6,9 @@ about SMK.  If you are brand new to creating web maps the
 [smk command line tool]((https://github.com/bcgov/smk-cli))
 (cli) is a great place to start.
 
-* [smk javascript library](https://github.com/bcgov/smk)
-* [smk command line tool](https://github.com/bcgov/smk-cli)
-* [smk helm charts](https://github.com/bcgov/smk-helms)
+* [SMK command line tool (CLI)](https://github.com/bcgov/smk-cli)
+* [SMK javascript library](https://github.com/bcgov/smk)
+* [SMK Helm Charts](https://github.com/bcgov/smk-helms)
 
 ## SMK Github actions
 
@@ -23,5 +23,10 @@ actions.  We wanted to be able to update / fix github actions that perform
 these steps without having to edit individual repositories.  In order to 
 accomplish this github composite actions have been created and are located
 in this repository.
+
+## Deploy an SMK based app to Openshift
+
+[User Guide to Deploy SMK to Openshift](./docs/summary.md)
+
 
 

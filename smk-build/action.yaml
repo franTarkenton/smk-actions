@@ -146,15 +146,17 @@ runs:
         fi
 
         # ---- adding the tag that was assigned to the image to the issue ----
+        # --header "authorization: Bearer ${{ inputs.GHCR_TOKEN }}" \
         jsonwithlabels=$(curl --header "Content-Type: application/json" \
-        --header "authorization: Bearer ${{ inputs.GHCR_TOKEN }}" \
+        -u "$GHCR_USER:$GHCR_TOKEN" \
         --request GET \
         $issue_url | jq '.labels |= . + ["'$DOCKER_VERSION_TAG'"] | {("labels"): .["labels"]?}')
         
         # now send modified json back to the api with the new label
+        # looks like gh api doesn't use bearer anymore 
+        #         --header "authorization: Bearer ${{ inputs.GITHUB_TOKEN }}" \
         curl \
         --location --request POST $issue_url \
         --header "Content-Type: application/json" \
-        --header "authorization: Bearer ${{ inputs.GITHUB_TOKEN }}" \
+        -u "$GHCR_USER:$GHCR_TOKEN" \
         --data "$jsonwithlabels"
-
