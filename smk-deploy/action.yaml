@@ -290,7 +290,7 @@ runs:
 
           # create the gwa config
           # --------------------------------------------------
-          python3 gwa/createGWAConfig.py \
+          python3 $GITHUB_ACTION_PATH/createGWAConfig.py \
             --OCService $oc_service_name \
             --reponame $REPONAME \
             --OCNamespace $oc_project \
