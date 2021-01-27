@@ -1,5 +1,7 @@
 # Add Build Deploy Files
 
+<img src="https://lh3.googleusercontent.com/pw/ACtC-3d9oiZBEHAhC5itlp0r42IEk1qm2bAvIlnGCj7oBHOJOGt_rBaTn66XELEqb3T1fhLgZe7Shsjkv0Zt-zvzJ42gb_zJYqr-eiIvz_Fwo3-_GdXP_ETGGfJPybWmFO8yuNQrltOOvPy3j4Je68CLx0HDew=w999-h562-no?authuser=0" width="500">
+
 ## Overview
 
 In order to enable automated build / deployment of your SMK application you will
@@ -41,3 +43,9 @@ drwxr-xr-x 2 kjnether kjnether  4096 Jan 22 11:49 layers
 * LICENSE
 * code_of_conduct.md
 
+
+<br>
+
+***[Back to summary](./summary.md)***
+
+***[Next steps...  ...add Repository Secrets](./addSecrets.md)***

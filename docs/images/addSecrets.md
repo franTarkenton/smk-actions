@@ -1,5 +1,9 @@
 # Adding Secrets
 
+<img src="https://lh3.googleusercontent.com/pw/ACtC-3ftNjLChAp5WDZvCtPvYlDiwQSCBXymiWZOKlQgnbTgUeJQip0nIVQN91kVdEkg25TjBc-hF0eMUVsLqLDlSKn3Qj1CKe7UM80xuPKUS_qI-iu218q9ddCS-xGPYr_UUlhqkhQ2yPRDPjIeYkWBjuPinw=w999-h562-no?authuser=0" width=500>
+
+<br><br>
+
 [Previous steps have copied github actions into your repository](./addBuildDeployFiles.md). Those actions
 are configured to fire on Pull requests to either the 'main' or the 'master'
 branches of the repository.
@@ -52,3 +56,4 @@ After these secrets have been populated you can test your flow by triggering the
 build deploy with a pull request to the master branch.
 
 
+[***Back to summary***](./summary.md)

@@ -1,5 +1,7 @@
 # Publishing to Github
 
+<img src="https://lh3.googleusercontent.com/pw/ACtC-3f4MZoBPasGdI9oQlUJv3wH0UoYHw7IDn75pyK02KR0mk74R8cSdApk0_ZVqWtqaFilxYIprl3qDy6KfaogBNgV6Bn3u9qxbG30AMJlVPCiwnHBkTjtXM1eCTvUCvPWCYAYzhXFR6J3uLf9Zr83KxucjQ=w999-h562-no?authuser=0" width="500">
+
 This guide goes over very briefly how to go about publishing your SMK based app
 to github.
 
@@ -50,3 +52,23 @@ In a nutshell:
 1. Clone the repository
 1. Add your smk files to the repo
 1. stage/commit/push your changes to the remote
+
+# DataBC take Ownership of the repository
+
+The original author of the application will be removed from the repository 
+administrator privileges.  If the original author requires admin they can 
+always fork the repo.  They will have administration on the fork.
+
+Once this final step is complete only DataBC staff will have admin access
+to the repository.
+
+The original author will still be able too continue to contribute to the 
+application, and for most users they won't notice any differences.
+
+[Github permission documentation](https://docs.github.com/en/github/setting-up-and-managing-organizations-and-teams/repository-permission-levels-for-an-organization)
+
+<br>
+
+***[Back to summary](./summary.md)***
+<br>
+***[Next steps...  ... Add build / deploy code to the repository](./addBuildDeployFiles.md)***
