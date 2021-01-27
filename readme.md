@@ -1,5 +1,7 @@
 # Simple Map Kit Github Actions
 
+<img src="https://lh3.googleusercontent.com/pw/ACtC-3cDXfdy-1qrVv-laLoK-g33LyILuSlKP1p5kE4FgOzwzRBRqeKo3l0bBjNHR_cLv7ZGXMCX1zpNk6L8PGOFuDZPSsLkC-uhgyRNi18yDt3bVUdGUWxOl4qT4wrdsxbIU2KnwNkbPs-_MrWi4cIXZLQjkQ=w1186-h668-no?authuser=0" width="550">
+
 Simple Map Kit (smk) is a javascript library and a CLI tool that facilitate
 the construction of web maps.  The following links provide more information 
 about SMK.  If you are brand new to creating web maps the
