@@ -155,6 +155,8 @@ runs:
         REPONAME="${{ steps.getRepo.outputs.REPONAME }}"
         echo reponame is $REPONAME
 
+        GWANSPNAME=$REPONAME-gwa-nsp
+
         IMAGE_PULL_SECRET_NAME=${{ steps.getRepo.outputs.REPONAME }}-image-pull-secret
         echo IMAGE_PULL_SECRET_NAME $IMAGE_PULL_SECRET_NAME
 
@@ -173,6 +175,7 @@ runs:
            --set app_name=${{ steps.getRepo.outputs.REPONAME }} \
            --set env=dev \
            --set app_image_pull_secret_params.email=${{ steps.getGithubEmail.outputs.EMAIL }} \
+           --set kong_config.aps_nsp_name=$GWANSPNAME \
            --set app_image_pull_secret_params.password=$GHCR_TOKEN \
            --set app_image_pull_secret_params.name=$IMAGE_PULL_SECRET_NAME \
            --set app_image_pull_secret_params.imagetag=${{ steps.getDockerImageTag.outputs.DOCKER_VERSION_TAG }} \
