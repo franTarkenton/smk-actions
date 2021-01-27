@@ -29,15 +29,15 @@ Before you do anything review this checklist:
 So to reiterate navigate to the repo in github, click on the repository
 settings.  
 
-<img src="./repo_settings.png" width="500">
+<img src="./images/repo_settings.png" width="500">
 
 Once in settings click on secrets
 
-<img src="./repo_secrets.png" width="300">
+<img src="./images/repo_secrets.png" width="300">
 
 Now at the top right there is button called "New Repository Secret", find it and click on it.
 
-<img src="./add_new_secret.png" width="200">
+<img src="./images/add_new_secret.png" width="200">
 
 
 # Secrets to Add
