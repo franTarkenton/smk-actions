@@ -8,7 +8,9 @@ In order to enable automated build / deployment of your SMK application you will
 need to add some files to your repository.
 
 All the files that need to be added exist in this repository in 
-the directory **smk-publish-app*. 
+the directory **smk-publish-app*. (https://github.com/bcgov/smk-actions/tree/main/smk-publish-app)
+
+
 
 # Details
 
