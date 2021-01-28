@@ -210,6 +210,10 @@ runs:
         # issue url
         # ---------------------------------------------------------
         ISSUE_URL=${{ steps.getIssueUrl.outputs.ISSUE_URL }}
+        env=$(python3 $GITHUB_ACTION_PATH/isEnvSet.py ${{ inputs.OPENSHIFT_TOKEN_PROD }})
+        if [ $env == "prod" ]; then
+          ISSUE_URL=$ISSUE_URL/comments
+        fi
 
         #format reviewers, quotes get stripped when passed to action
         echo pr mentions ${{ inputs.PR_MENTIONS }}
