@@ -35,4 +35,5 @@ in this repository.
 
 * could possibly save time by creating organization wide secrets, then would only grant access to them, instead of having to copy them all into the repo
 * add and 'env' tag to the pr issue comments so you can distinguish between dev oc deploy and prod urls.  That said prod / dev are in the urls themselves.
+* restrict the actions that can be run in the repo
 
