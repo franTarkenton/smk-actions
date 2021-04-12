@@ -371,7 +371,7 @@ runs:
       run: |
         env=$(python3 $GITHUB_ACTION_PATH/isEnvSet.py ${{ inputs.OPENSHIFT_TOKEN_PROD }})
         echo env is $env
-        if [ $env != 'prod' ]; then
+        if [ $env != 'foo-prod' ]; then
           PR_MENTIONS_JSON=$(python3 $GITHUB_ACTION_PATH/formatJson.py "${{ inputs.PR_MENTIONS }}")
           MENTION_STRING=$(echo $PR_MENTIONS_JSON | jq -rc 'map("@" + .) | .[]' | tr '\n' ',' | sed 's/, */, /g' |  sed 's/, *$//g')
 
