@@ -316,7 +316,7 @@ runs:
           # authenticate to api
           # ---------------------------------------------------
           # calculate the auth url based on the env tag
-          devAuthUrl=https://authz-apps-gov-bc-ca.test.apsgw.xyz
+          devAuthUrl=https://authz-apps-gov-bc-ca.test.api.gov.bc.ca
           prodAuthUrl=https://authz.apps.gov.bc.ca
           gwaAuthUrl=${gwaEnv/test/$devAuthUrl}
           gwaAuthUrl=${gwaAuthUrl/dev/$devAuthUrl}
@@ -324,7 +324,7 @@ runs:
           echo gwaAuthUrl $gwaAuthUrl
 
           # ditto for gwa url
-          devGWAUrl=https://gwa-api-gov-bc-ca.test.apsgw.xyz
+          devGWAUrl=https://gwa-api-gov-bc-ca.test.api.gov.bc.ca
           prodGWAUrl=https://gwa.api.gov.bc.ca
           gwaUrl=${gwaEnv/test/$devGWAUrl}
           gwaUrl=${gwaUrl/dev/$devGWAUrl}
