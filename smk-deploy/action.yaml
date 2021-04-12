@@ -236,7 +236,7 @@ runs:
 
         # Grabbing the GWA command line tool
         #----------------------------------------------------
-        GWA_VERSION=v1.1.2
+        GWA_VERSION=v1.1.3
         GWA_CLI_LINK=https://github.com/bcgov/gwa-cli/releases/download/${GWA_VERSION}/gwa_${GWA_VERSION}_linux_x64.zip
         curl -L -O $GWA_CLI_LINK
         unzip -p gwa_${GWA_VERSION}_linux_x64.zip > gwa-cli-linux
