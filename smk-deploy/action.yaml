@@ -285,12 +285,10 @@ runs:
           gwaSwitch=${gwaSwitch/test/-T}
           gwaSwitch=${gwaSwitch/prod/-P}
 
-          # currently prod is not configured, soon (Feb'ish this can be deleted)
-          sudo echo "142.34.194.118 gwa.api.gov.bc.ca" | sudo tee -a /etc/hosts
-
           # init the gwa config
           # --------------------------------------------------
           ./gwa-cli-linux init $gwaSwitch \
+            --api-version 1 \
             --namespace=$GWA_NAMESPACE \
             --client-id=$GWA_CLIENTID \
             --client-secret=$GWA_TOKEN
