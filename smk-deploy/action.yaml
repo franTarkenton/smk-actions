@@ -300,7 +300,7 @@ runs:
             --reponame $REPONAME \
             --OCNamespace $oc_project \
             --servicePort $oc_service_port \
-            --kongDomain api.gov.bc.ca \
+            --kongDomain apps.gov.bc.ca \
             --GWANamespace $GWA_NAMESPACE \
             --GWAenv $gwaEnv > gwa_config.yaml
 
