@@ -36,7 +36,6 @@ class GWAConfig:
     def createYaml(self):
         yamlData = \
             { 
-                "_format_version": "1.1",
                 "services": [
                     {
                         "name": self.OCService,
