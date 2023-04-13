@@ -26,6 +26,7 @@ Once these requirements have been met, any pull request to the master/main branc
 will trigger the actions, which at a high level will:
 
 1. Build a new docker image and store it in the packages associated with the repository.
+1. Create initial OpenShift configuration objects for the SMK app the first time the deploy runs 
 1. Deploy the image to a dev openshift namespace
 1. Comment on the github issue associated with the pull request, include the dev url
 

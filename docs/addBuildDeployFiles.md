@@ -4,14 +4,13 @@
 
 ## Overview
 
-In order to enable automated build / deployment of your SMK application you will
-need to add some files to your repository.
+In order to enable automated build / deployment of your SMK application into OpenShift, you will need to add some files to your repository.
 
 All the files that need to be added exist in this repository in 
 the directory **smk-publish-app**. 
 (https://github.com/bcgov/smk-actions/tree/main/smk-publish-app)
 
-
+**You won't need to create initial objects in OpenShift yourself!** Configuration files in **smk-publish-app** reference other configuration files in **smk-build** and **smk-deploy**. The first time you deploy, these configuration files will be used to create OpenShift objects using the name of your SMK app repository as a prefix. Configuration file scripts download the `oc` client and run commands to create initial objects in OpenShift using the parameters in the configuration files you copied from **smk-publish-app**.
 
 # Details
 

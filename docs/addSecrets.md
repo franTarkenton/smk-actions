@@ -46,14 +46,23 @@ Now add the following secret definitions:
 
 | Secret name | Description |
 | ----------- | ------------ | 
-| GHCR_TOKEN | this the token for your github service account |
+| GHCR_TOKEN | The token for this SMK app created with your Github service account. It should include [scopes](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/scopes-for-oauth-apps) "workflow", "write:packages", and "delete:packages". |
 | GHCR_USER | The username that is associated with the github service account |
 | OPENSHIFT_SERVER_URL | The url to openshift, this is the same url that is passed when you login to openshift on the command line |
 | OPENSHIFT_TOKEN_DEV | The api key for for the service account that is configured in the dev namespace | 
 | OPENSHIFT_TOKEN_PROD | The api key for the service account that is configured in the prod namespace |
 
-After these secrets have been populated you can test your flow by triggering the 
-build deploy with a pull request to the master branch.
+To find OpenShift tokens, log into OpenShift and look at the ServiceAccounts in both Dev and Prod workspaces. For each, choose an appropriate ServiceAccount. You can find one by looking at Actions output from a deploy in a configured SMK app. Then look at its Secrets (in the ServiceAccount's YAML view) and pick an appropriate Secret - look for "token" in the name. Go to that Secret and copy the value of "token" in its Data.
 
+# Test Your Deploy
+
+After these secrets have been populated you can test your flow by triggering the 
+build deploy with a pull request to the master branch. 
+
+It may take a few deploy attempts to shake out issues. When a deploy fails, use deploy output from other SMK apps as reference and compare your deploy output with their output to help diagnose the failure. To retrigger a deploy, close the pull request that triggered it and then reopen it.
+
+# Create a Horizontal Pod Autoscaler
+
+It is recommended to create a Horizontal Pod Autoscaler to more efficiently cope with high demand. Log into OpenShift and find a previously created HPA to use as reference. Create a new HPA referencing the DeploymentConfig created for your SMK app.
 
 [***Back to summary***](./summary.md)
