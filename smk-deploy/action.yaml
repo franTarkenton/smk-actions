@@ -289,6 +289,7 @@ runs:
 
           # init the gwa config
           # --------------------------------------------------
+          ./gwa-cli-linux config set namespace $GWA_NAMESPACE
           ./gwa-cli-linux init $gwaSwitch \
             --api-version=1 \
             --namespace=$GWA_NAMESPACE \
