@@ -237,9 +237,11 @@ runs:
         # Grabbing the GWA command line tool
         #----------------------------------------------------
         GWA_VERSION=v2.0.3
-        GWA_CLI_LINK=https://github.com/bcgov/gwa-cli/releases/download/${GWA_VERSION}/gwa_${GWA_VERSION}_linux_x64.zip
+        GWA_CLI_LINK=https://github.com/bcgov/gwa-cli/releases/download/${GWA_VERSION}/gwa_Linux_x86_64.tgz
         curl -L -O $GWA_CLI_LINK
-        unzip -p gwa_${GWA_VERSION}_linux_x64.zip > gwa-cli-linux
+        gunzip < gwa_Linux_x86_64.tgz | tar -xvf -
+        #unzip -p gwa_${GWA_VERSION}_linux_x64.zip > gwa-cli-linux
+        mv gwa gwa-cli-linux
         chmod +x gwa-cli-linux
 
     - name: Configure Kong Route
